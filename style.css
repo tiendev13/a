@@ -1,0 +1,461 @@
+/* Custom CSS for Mùa Thanh Xuân Rực Rỡ - Enhanced Báo Tường Theme */
+
+/* --- Spring Color Palette --- */
+:root {
+  --spring-green-light: #e8f5e9; /* Very light green, like fresh leaves */
+  --spring-yellow-light: #fffde7; /* Creamy yellow, like sunlight */
+  --spring-green-primary: #66bb6a; /* Fresh green for main accents */
+  --spring-blue-accent: #81d4fa; /* Sky blue, light and airy */
+  --spring-info-link: #26c6da; /* Vibrant cyan for links */
+  --spring-success-text: #4caf50; /* Standard green for positive messages */
+  --spring-warning-text: #ffd54f; /* Soft yellow for warnings/highlights */
+  --spring-cream-bg: #fdfdfd; /* Off-white for body background, mimicking paper */
+  --spring-dark-text: #424242; /* Soft dark grey for primary text */
+  --spring-muted-text: #757575; /* Lighter grey for secondary text */
+  --spring-white: #ffffff;
+  --spring-shadow: rgba(0, 0, 0, 0.08); /* Soft shadow for elements */
+  --spring-border-light: rgba(0, 0, 0, 0.05); /* Light border for sections */
+}
+
+/* --- General Body & Fonts --- */
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--spring-cream-bg);
+  color: var(--spring-dark-text);
+  line-height: 1.7; /* Improved readability */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: var(--spring-green-primary);
+}
+
+.font-dancing-script {
+  font-family: "Dancing Script", cursive;
+}
+
+.font-charmonman {
+  font-family: "Charmonman", cursive;
+  font-weight: 400; /* Regular weight for handwritten feel */
+}
+
+/* --- Header Main --- */
+.header-main {
+  background: linear-gradient(
+    135deg,
+    var(--spring-green-light),
+    var(--spring-yellow-light)
+  );
+  color: var(
+    --spring-dark-text
+  ); /* Header text color adjusted for lighter gradient */
+  box-shadow: 0 4px 8px var(--spring-shadow);
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-main::before,
+.header-main::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3); /* Lighter, more subtle bubbles */
+  border-radius: 50%;
+}
+
+.header-main::before {
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  animation: float1 10s infinite ease-in-out;
+}
+
+.header-main::after {
+  bottom: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  animation: float2 12s infinite ease-in-out;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, 30px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, -25px) scale(1.15);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.header-title {
+  font-size: 3.8rem; /* Slightly larger */
+  color: var(--spring-green-primary); /* Use primary spring green for title */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-subtitle {
+  font-family: "Quicksand", sans-serif;
+  color: var(--spring-dark-text);
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  background-color: var(--spring-white);
+  box-shadow: 0 2px 5px var(--spring-shadow);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.8rem;
+  color: var(--spring-green-primary) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--spring-dark-text) !important;
+  font-weight: 500;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--spring-green-primary) !important;
+  transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  background-image: url("https://picsum.photos/id/1077/1920/1080"); /* Spring landscape with flowers or fresh greenery */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.45
+  ); /* Slightly darker overlay for better text contrast */
+}
+.lead {
+  text-align: center;
+}
+.hero-heading {
+  font-size: 4.8rem; /* A bit more impactful */
+  color: var(--spring-white);
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 750px; /* hoặc giá trị bạn muốn */
+  margin: 50px auto; /* đẩy khối vào giữa */
+}
+
+.btn-light {
+  color: var(--spring-green-primary);
+  border-color: var(--spring-white);
+  background-color: var(--spring-white);
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 50px; /* Pill shape */
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: var(--spring-green-primary);
+  color: var(--spring-white);
+  border-color: var(--spring-green-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(var(--spring-green-primary), 0.3);
+}
+
+/* --- Main Content Container (Báo Tường Look) --- */
+.newspaper-main-content {
+  max-width: 1200px; /* Setting a fixed max-width for the overall content area */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* --- Section Titles for Báo Tường --- */
+.section-title {
+  font-size: 3.2rem;
+  padding-bottom: 15px;
+  margin-bottom: 45px;
+  position: relative;
+  color: var(--spring-green-primary);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(-3deg); /* Slight rotation for "hand-drawn" feel */
+  width: 100px;
+  height: 5px;
+  background-color: var(--spring-yellow-light);
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Báo Tường Block/Item Styling --- */
+.bao-tuong-block,
+.bao-tuong-section {
+  background-color: var(--spring-white);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--spring-shadow);
+  padding: 35px; /* Increased padding for more breathing room */
+  border: 1px solid var(--spring-border-light);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px; /* Increased vertical separation between main blocks */
+}
+
+.bao-tuong-block:last-child,
+.bao-tuong-section:last-child {
+  margin-bottom: 0;
+}
+
+.bao-tuong-item {
+  background-color: var(--spring-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--spring-shadow);
+  border: 1px solid var(--spring-border-light);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+}
+
+.bao-tuong-item:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bao-tuong-item .card-body {
+  padding: 20px; /* Slightly more padding inside cards */
+}
+
+.bao-tuong-img {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bao-tuong-text {
+  font-family: "Quicksand", sans-serif;
+  color: var(--spring-dark-text);
+  text-align: justify; /* Newspaper feel */
+}
+
+/* Rotations for "pasted" look */
+.rotate-slight-left {
+  transform: rotate(-1.5deg);
+}
+.rotate-slight-right {
+  transform: rotate(1.5deg);
+}
+
+/* Stamped/pinned elements */
+.bao-tuong-stamp {
+  color: var(--spring-muted-text);
+  font-style: italic;
+  font-family: "Charmonman", cursive;
+  opacity: 0.8;
+}
+.bao-tuong-stamp i {
+  color: var(--spring-blue-accent);
+}
+
+/* Custom Text Colors for Spring Theme */
+.text-spring-primary {
+  color: var(--spring-green-primary) !important;
+}
+.text-spring-info {
+  color: var(--spring-info-link) !important;
+}
+.text-spring-success {
+  color: var(--spring-success-text) !important;
+}
+.text-spring-warning {
+  color: var(--spring-warning-text) !important;
+}
+.bg-spring-light {
+  background-color: var(--spring-green-light) !important;
+}
+.bg-spring-yellow-light {
+  background-color: var(--spring-yellow-light) !important;
+}
+.bg-spring-green-light {
+  background-color: var(--spring-green-light) !important;
+}
+.bg-spring-blue-accent {
+  background-color: var(--spring-blue-accent) !important;
+  color: var(--spring-dark-text) !important;
+} /* Ensure text is visible on accent background */
+.bg-spring-white {
+  background-color: var(--spring-white) !important;
+}
+
+/* Buttons with spring theme */
+.btn-outline-spring-primary {
+  color: var(--spring-green-primary);
+  border-color: var(--spring-green-primary);
+  transition: all 0.3s ease;
+}
+.btn-outline-spring-primary:hover {
+  background-color: var(--spring-green-primary);
+  color: var(--spring-white);
+  border-color: var(--spring-green-primary);
+  transform: translateY(-2px);
+}
+
+/* Sticker/Quote styling */
+.bao-tuong-sticker {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    var(--spring-info-link),
+    var(--spring-blue-accent)
+  );
+  color: var(--spring-white);
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  box-shadow: 0 5px 15px var(--spring-shadow);
+  transform: rotate(5deg); /* A little playful rotation */
+  margin-top: 30px; /* Ensure spacing from previous section */
+}
+
+/* --- Footer --- */
+.footer-main {
+  background: linear-gradient(
+    45deg,
+    var(--spring-yellow-light),
+    var(--spring-green-light)
+  );
+  color: var(--spring-dark-text);
+  padding: 40px 0;
+  box-shadow: 0 -4px 8px var(--spring-shadow);
+}
+
+.footer-main p,
+.footer-main .social-icons a {
+  color: var(--spring-dark-text);
+}
+
+.footer-main .social-icons a {
+  font-size: 1.6rem;
+  margin: 0 12px;
+  transition: transform 0.3s ease;
+}
+
+.footer-main .social-icons a:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: var(--spring-green-primary) !important; /* Highlight on hover */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  /* Adjust grid for medium screens */
+  .newspaper-grid .col-lg-8,
+  .newspaper-grid .col-lg-4 {
+    width: 100%; /* Full width for single column layout */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header-title {
+    font-size: 2.8rem;
+  }
+  .hero-heading {
+    font-size: 3.5rem;
+  }
+  .hero-text {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  .bao-tuong-block,
+  .bao-tuong-section {
+    padding: 20px;
+    margin-bottom: 30px;
+  } /* Adjust padding and margin */
+  .bao-tuong-img {
+    height: 180px;
+  }
+  .rotate-slight-left,
+  .rotate-slight-right {
+    transform: none !important;
+  } /* Remove rotations on small screens */
+  .bao-tuong-sticker {
+    transform: none !important;
+    margin-top: 20px;
+  }
+  .bao-tuong-stamp {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header-title {
+    font-size: 2.2rem;
+  }
+  .hero-heading {
+    font-size: 2.8rem;
+  }
+  .hero-text {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .btn-light {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
